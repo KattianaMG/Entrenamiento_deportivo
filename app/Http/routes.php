@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/inicio_plataforma',function ()
+{
+  return view('inicio_plataforma');
+});
