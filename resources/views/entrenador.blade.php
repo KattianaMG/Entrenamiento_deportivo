@@ -9,11 +9,12 @@
     <br>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1>REISTRAR ENTRENADOR</h1>
-      <form>
+      <form class="" action="" method="POST" enctype="multipart/form-data">
+          {!! csrf_field() !!}
         <div class="col-md-6">
             <div class="form-group">
               <label for="dni">NUMERO DE DOCUMENTO:</label>
-              <input class="form-control" type="text" placeholder="dni" name="dni" id="dni"><!--caja de texto-->
+              <input class="form-control" type="text" placeholder="numero identificación" name="dni" id="dni"><!--caja de texto-->
             </div>
             <div class="form-group">
               <label for="nombre">NOMBRES:</label>
