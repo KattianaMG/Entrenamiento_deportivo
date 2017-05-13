@@ -8,7 +8,7 @@
 
 <br>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-  <h2>REALIZAR TEST DE FUERZA</h2>
+  <h2>REALIZAR TEST DE FLEXIBILIDAD</h2>
   <br>
   <form class="" action="{{route('guardar.entrenador')}}" method="POST" enctype="multipart/form-data">
     {!! csrf_field() !!}
@@ -18,20 +18,20 @@
         <input class="form-control" type="date"  name="sit up" id="fecha"><!--caja de texto-->
       </div>
         <div class="form-group">
-          <label for="dni" class="text-primary">RESULTADO TEST DE SIT UP:</label>
-          <input class="form-control" type="int"name="sit up" id="sit up"><!--caja de texto-->
+          <label for="dni" class="text-primary">RESULTADO TEST DE WELL:</label>
+          <input class="form-control" type="int" name="well" id="well"><!--caja de texto-->
         </div>
         <div class="form-group">
-          <label for="nombre" class="text-primary">RESULTADO TEST DE PRESS BANCA:</label>
-          <input class="form-control" type="int" name="press banca"  id="press banca"><!--caja de texto-->
+          <label for="nombre" class="text-primary">RESULTADO TEST DE FLEXION PROFUNDA:</label>
+          <input class="form-control" type="int" name="flexion_profunda"  id="flexion_profunda"><!--caja de texto-->
         </div>
         <div class="form-group">
-          <label for="apellido" class="text-primary">RESULTADO TEST DE CURL BICEPS :</label>
-          <input class="form-control" type="int" name="curl biceps" id="curl biceps"><!--caja de texto-->
+          <label for="apellido" class="text-primary">RESULTADO TEST DE SPLIT LATERAL:</label>
+          <input class="form-control" type="int" name="split_lateral" id="split_lateral"><!--caja de texto-->
         </div>
         <div class="form-group">
-          <label for="apellido" class="text-primary">RESULTADO TEST DE SENTADILLA:</label>
-          <input class="form-control" type="int" name="sentadilla" id="sentadilla"><!--caja de texto-->
+          <label for="apellido" class="text-primary">RESULTADO TEST DE ELEVACION DE HOMBROS:</label>
+          <input class="form-control" type="int" name="elevacion_hombros" id="elevacion_hombros"><!--caja de texto-->
         </div>
         <div class="form-group">
           <label for="apellido" class="text-primary">RESULTADO TEST DE HOMBROS:</label>
