@@ -20,3 +20,8 @@ Route::get('/inicio_plataforma',function ()
 {
   return view('inicio_plataforma');
 });
+
+Route::get('/entrenador',function ()
+{
+  return view('entrenador');
+});
