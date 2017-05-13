@@ -49,6 +49,7 @@
             <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar jugador </a></li>
             <li><a href="#"><i class="fa fa-align-justify" aria-hidden="true"></i> Listar jugadores </a></li>
             <li><a href="/entrenador"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar entrenador </a></li>
+            <li><a href="/listar_deportistas"><i class="fa fa-align-justify" aria-hidden="true"></i> Listar deportistas </a></li>
           </ul>
         </div>
 

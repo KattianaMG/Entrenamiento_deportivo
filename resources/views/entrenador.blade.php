@@ -17,17 +17,21 @@
               <input class="form-control" type="text" placeholder="numero identificación" name="dni" id="dni"><!--caja de texto-->
             </div>
             <div class="form-group">
-              <label for="nombre">NOMBRES:</label>
-              <input class="form-control" type="text" placeholder="nombre"name="nombre" id="nombre"><!--caja de texto-->
+              <label for="nombre">NOMBRE:</label>
+              <input class="form-control" type="text" name="name" placeholder="nombre" value="{{ old('name') }}"><!--caja de texto-->
             </div>
             <div class="form-group">
               <label for="apellido">APELLIDOS:</label>
               <input class="form-control" type="text" placeholder="apellido"name="apellido" id="apellido"><!--caja de texto-->
             </div>
+            <div class="form-group">
+              <label for="email">EMAIL:</label>
+              <input class="form-control" type="email" placeholder="Email" name="email" value="{{ old('email') }}">
+            </div>
 
           <div class="form-group">
             <label for="categoria">SEXO</label>
-            <select class="form-control" name="categoria">
+            <select class="form-control" name="sexo">
               <option value="M">M</option>
               <option value="F">F</option>
             </select>
@@ -50,6 +54,14 @@
              <div class="form-group">
                <label for="profecion">DIRECCION:</label>
                <input class="form-control" type="text" placeholder="direccion"name="profesion" id="direccion"><!--caja de texto-->
+             </div>
+             <div class="form-group">
+               <label for="profecion">CONTRASEÑA:</label>
+               <input class="form-control" type="password" placeholder="*******" name="password"><!--caja de texto-->
+             </div>
+             <div class="form-group">
+               <label for="profecion">CONFIRMAR CONTRASEÑA:</label>
+               <input class="form-control" type="password" placeholder="*******" name="password_confirmation"><!--caja de texto-->
              </div>
         </div>
 

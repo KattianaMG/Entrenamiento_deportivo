@@ -21,7 +21,11 @@ Route::get('/inicio_plataforma',function ()
   return view('inicio_plataforma');
 });
 
-Route::get('/entrenador',function ()
+Route::get('/listar_deportistas',function ()
 {
-  return view('entrenador');
+  return view('listar_deportistas');
 });
+
+Route::get('/entrenador',['as'=>'registar.entrenador', 'uses'=>'EntrenadorController@mostrarformulario']);
+
+Route::post('guardarentrenador',['as'=>'guardar.entrenador', 'uses'=>'EntrenadorController@store']);

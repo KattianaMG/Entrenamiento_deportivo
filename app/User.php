@@ -23,12 +23,17 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $table = 'users';
 
+    protected $primaryKey = 'dni';
+    public $incrementing = false;
+
+    public $timestamps = false;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['dni', 'name', 'apellido', 'sexo', 'profesion', 'direccion', 'deporte', 'email', 'password'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -36,4 +41,8 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    /*public function compraitem(){
+        return $this->hasMany('App\CompraItem', 'fk_id_producto', 'id');
+    }*/
 }
