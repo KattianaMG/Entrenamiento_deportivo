@@ -46,9 +46,9 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="/inicio_plataforma"><i class="fa fa-home" aria-hidden="true"></i> Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar jugador </a></li>
-            <li><a href="#"><i class="fa fa-align-justify" aria-hidden="true"></i> Listar jugadores </a></li>
-            <li><a href="/entrenador"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar entrenador </a></li>
+            <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar entrenador </a></li>
+            <li><a href="/listar_entrenadores"><i class="fa fa-align-justify" aria-hidden="true"></i> Listar entrenadores </a></li>
+            <li><a href="/entrenador"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar deportista </a></li>
             <li><a href="/listar_deportistas"><i class="fa fa-align-justify" aria-hidden="true"></i> Listar deportistas </a></li>
           </ul>
         </div>
