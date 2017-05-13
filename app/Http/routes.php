@@ -40,6 +40,15 @@ Route::get('/test_fuerza',function ()
 {
   return view('test_fuerza');
 });
+Route::get('/test_flexibilidad',function ()
+{
+  return view('test_flexibilidad');
+});
+
+Route::get('/test_corporal',function ()
+{
+  return view('test_corporal');
+});
 //**************************************
 Route::get('/deportista',function ()
 {
