@@ -40,6 +40,11 @@ Route::get('/test_fuerza',function ()
 {
   return view('test_fuerza');
 });
+//**************************************
+Route::get('/deportista',function ()
+{
+  return view('deportista');
+});
 
 
 Route::get('/entrenador',['as'=>'registar.entrenador', 'uses'=>'EntrenadorController@mostrarformulario']);

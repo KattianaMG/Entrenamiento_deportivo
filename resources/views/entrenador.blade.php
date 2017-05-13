@@ -6,7 +6,6 @@
   @endsection
   @section ('content')
 
-    <br>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1>REISTRAR ENTRENADOR</h1>
       <form class="" action="{{route('guardar.entrenador')}}" method="POST" enctype="multipart/form-data">
