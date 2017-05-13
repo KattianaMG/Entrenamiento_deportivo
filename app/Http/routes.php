@@ -31,6 +31,17 @@ Route::get('/listar_entrenadores',function ()
   return view('listar_entrenadores');
 });
 
+Route::get('/test_resistencia',function ()
+{
+  return view('test_resistencia');
+});
+
+Route::get('/test_fuerza',function ()
+{
+  return view('test_fuerza');
+});
+
+
 Route::get('/entrenador',['as'=>'registar.entrenador', 'uses'=>'EntrenadorController@mostrarformulario']);
 
 Route::post('guardarentrenador',['as'=>'guardar.entrenador', 'uses'=>'EntrenadorController@store']);
