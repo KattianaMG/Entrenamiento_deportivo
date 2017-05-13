@@ -9,8 +9,8 @@
     <br>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1>REISTRAR ENTRENADOR</h1>
-      <form class="" action="" method="POST" enctype="multipart/form-data">
-          {!! csrf_field() !!}
+      <form class="" action="{{route('guardar.entrenador')}}" method="POST" enctype="multipart/form-data">
+        {!! csrf_field() !!}
         <div class="col-md-6">
             <div class="form-group">
               <label for="dni">NUMERO DE DOCUMENTO:</label>
@@ -53,7 +53,7 @@
             </div>
              <div class="form-group">
                <label for="profecion">DIRECCION:</label>
-               <input class="form-control" type="text" placeholder="direccion"name="profesion" id="direccion"><!--caja de texto-->
+               <input class="form-control" type="text" placeholder="direccion"name="direccion" id="direccion"><!--caja de texto-->
              </div>
              <div class="form-group">
                <label for="profecion">CONTRASEÑA:</label>

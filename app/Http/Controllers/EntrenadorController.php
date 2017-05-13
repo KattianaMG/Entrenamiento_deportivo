@@ -42,7 +42,7 @@ class EntrenadorController extends Controller
      */
     public function store(Request $request)
     {
-          $datos = arrar(
+          $datos = array (
           'dni' => $request->dni,
           'name' => $request->name,
           'apellido' => $request->apellido,
@@ -50,7 +50,7 @@ class EntrenadorController extends Controller
           'profesion' => $request->profesion,
           'direccion' => $request->direccion,
           'deporte' => $request->deporte,
-          'email' => $requestemail,
+          'email' => $request->email,
           'password' => bcrypt($request->password)
       );
       $proyecto = new User($datos);

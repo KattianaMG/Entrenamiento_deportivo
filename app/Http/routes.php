@@ -26,6 +26,11 @@ Route::get('/listar_deportistas',function ()
   return view('listar_deportistas');
 });
 
+Route::get('/listar_entrenadores',function ()
+{
+  return view('listar_entrenadores');
+});
+
 Route::get('/entrenador',['as'=>'registar.entrenador', 'uses'=>'EntrenadorController@mostrarformulario']);
 
 Route::post('guardarentrenador',['as'=>'guardar.entrenador', 'uses'=>'EntrenadorController@store']);
