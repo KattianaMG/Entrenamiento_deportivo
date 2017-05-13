@@ -42,7 +42,7 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
-    /*public function compraitem(){
-        return $this->hasMany('App\CompraItem', 'fk_id_producto', 'id');
-    }*/
+    public function deportista(){
+        return $this->hasMany('App\Deportista', 'fk_entrenador', 'dni');
+    }
 }
