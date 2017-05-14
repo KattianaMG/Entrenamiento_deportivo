@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\User;
+use App\User; 
+use App\Deportista;
 use DB;
 
-class EntrenadorController extends Controller
+class DeportistaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,14 +19,10 @@ class EntrenadorController extends Controller
      */
     public function index()
     {
-        $entrenadores = User::all();
-
-        return view('/listar_entrenadores', compact('entrenadores'));
+        $deportistas = Deportista::all();
+        return view('/listar_deportistas', compact('deportistas'));
     }
 
-    public function mostrarformulario(){
-      return view('entrenador');
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -44,19 +41,26 @@ class EntrenadorController extends Controller
      */
     public function store(Request $request)
     {
-          $datos = array (
-          'dni' => $request->dni,
-          'name' => $request->name,
-          'apellido' => $request->apellido,
-          'sexo' => $request->sexo,
-          'profesion' => $request->profesion,
-          'direccion' => $request->direccion,
-          'deporte' => $request->deporte,
-          'email' => $request->email,
-          'password' => bcrypt($request->password)
-      );
-      $entrenador = new User($datos);
-      $entrenador->save();
+        $datos = array (
+          'dni_j' => $request->dni,
+          'nombre_j' => $request->nombre,
+          'apellido_j'=> $request->apellido,
+          'sexo_j' => $request->sexo,
+          'deporte_j' => $request->deporte,
+          'semestre' => $request->semestre,
+          'promedio' => $request->promedio,
+          'edad_j' => $request->edad,
+          'fk_entrenador' => $request->entrenador
+        );
+        $deportista = new Deportista($datos);
+        $deportista->save();
+        return redirect()->route('listar.deportista');
+    }
+
+    public function consultarentrenador()
+    {
+      $consulta = User::all();
+      return view('deportista', compact('consulta'));
     }
 
     /**
@@ -101,8 +105,8 @@ class EntrenadorController extends Controller
      */
     public function destroy($id)
     {
-        $entrenador = User::FindOrFail($id);
-        $eliminar = $entrenador->delete();
+        $deportista = Deportista::FindOrFail($id);
+        $eliminar = $deportista->delete();
 
         return back()->withInput();
     }

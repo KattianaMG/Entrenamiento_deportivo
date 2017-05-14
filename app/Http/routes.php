@@ -21,15 +21,9 @@ Route::get('/inicio_plataforma',function ()
   return view('inicio_plataforma');
 });
 
-Route::get('/listar_deportistas',function ()
-{
-  return view('listar_deportistas');
-});
+Route::get('/listar_deportistas', ['as' => 'listar.deportista', 'uses' => 'DeportistaController@index']);
 
-Route::get('/listar_entrenadores',function ()
-{
-  return view('listar_entrenadores');
-});
+Route::get('/listar_entrenadores', ['as' => 'listar.entrenador', 'uses' => 'EntrenadorController@index']);
 
 Route::get('/test_resistencia',function ()
 {
@@ -50,11 +44,13 @@ Route::get('/test_corporal',function ()
   return view('test_corporal');
 });
 //**************************************
-Route::get('/deportista',function ()
-{
-  return view('deportista');
-});
+Route::get('eliminardeportista/{id}', ['as'=>'eliminar.deportista', 'uses'=>'DeportistaController@destroy']);
 
+Route::get('eliminarentrenador/{id}', ['as'=>'eliminar.entrenador', 'uses'=>'EntrenadorController@destroy']);
+
+Route::get('/deportista', ['as'=>'vista.deportista', 'uses'=>'DeportistaController@consultarentrenador']);
+
+Route::post('guardardeportista',['as'=>'guardar.deportista', 'uses'=>'DeportistaController@store']);
 
 Route::get('/entrenador',['as'=>'registar.entrenador', 'uses'=>'EntrenadorController@mostrarformulario']);
 

@@ -63,10 +63,6 @@
                <input class="form-control" type="password" placeholder="*******" name="password_confirmation"><!--caja de texto-->
              </div>
         </div>
-
-
-
-
       </form>
 </div>
 

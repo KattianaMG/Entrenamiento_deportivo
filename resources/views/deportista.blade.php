@@ -9,12 +9,13 @@
       <h1>REGISTRAR DEPORTISTA</h1>
     <section class="main row">
       <div class="col-md-6">
-        <form>
+        <form class="" action="{{route('guardar.deportista')}}" method="POST" enctype="multipart/form-data">
+          {!! csrf_field() !!}
           <br>
           <div class="form-group">
             <label for="dni">NUMERO DE DOCUMENTO:</label>
             <input class="form-control" type="text" placeholder="dni" name="dni" id="dni"><!--caja de texto-->
-              </div>
+            </div>
             <div class="form-group">
             <label for="nombre">NOMBRE:</label>
             <input class="form-control" type="text" placeholder="nombre"name="nombre" id="nombre"><!--caja de texto-->
@@ -45,9 +46,20 @@
             <div class="form-group">
             <label for="edad">EDAD:</label>
             <input class="form-control" type="text" placeholder="edad" name="edad" id="edad"><!--caja de texto-->
-                  </div>
+            </div>
+
             <div class="form-group">
-              <button class="btn btn-primary">Guardar</button>
+              <label for="categoria">ENTRENADOR</label>
+              <select class="form-control" name="entrenador">
+                <option value=""></option>
+                @foreach($consulta as $con)
+                <option value="{{$con->dni}}">{{$con->name}}</option>
+                @endforeach
+              </select>
+           </div>
+
+            <div class="form-group">
+              <button class="btn btn-success">Guardar</button>
             </div>
         <form/>
       </div>
