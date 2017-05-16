@@ -34,7 +34,9 @@
           <button type="submit" class="btn btn-success">Guardar</button>
         </div>
   </div>
-
+  <aside class="col-md-6">
+    <img src="{{ asset('imagenes/t_resistencia.jpg')}}" class="img-responsive"/ >
+  </aside>
 
 
   </form>

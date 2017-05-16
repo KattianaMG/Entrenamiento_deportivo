@@ -13,43 +13,43 @@
           {!! csrf_field() !!}
           <br>
           <div class="form-group">
-            <label for="dni">NUMERO DE DOCUMENTO:</label>
+            <label for="dni" class="text-primary">NUMERO DE DOCUMENTO:</label>
             <input class="form-control" type="text" placeholder="dni" name="dni" id="dni"><!--caja de texto-->
             </div>
             <div class="form-group">
-            <label for="nombre">NOMBRE:</label>
+            <label for="nombre" class="text-primary">NOMBRE:</label>
             <input class="form-control" type="text" placeholder="nombre"name="nombre" id="nombre"><!--caja de texto-->
               </div>
             <div class="form-group">
-            <label for="apellido">APELLIDOS:</label>
+            <label for="apellido" class="text-primary">APELLIDOS:</label>
             <input class="form-control" type="text" placeholder="apellido"name="apellido" id="apellido"><!--caja de texto-->
               </div>
             <div class="form-group">
-              <label for="categoria">SEXO</label>
+              <label for="categoria" class="text-primary">SEXO:</label>
               <select class="form-control" name="sexo">
                 <option value="M">M</option>
                 <option value="F">F</option>
               </select>
            </div>
             <div class="form-group">
-            <label for="nombre">DEPORTE:</label>
-            <input class="form-control" type="text" placeholder="deporte que practica"name="deporte" id="deporte"><!--caja de texto-->
+            <label for="nombre" class="text-primary">DEPORTE:</label>
+            <input class="form-control" type="text" placeholder="deporte a practicar"name="deporte" id="deporte"><!--caja de texto-->
                 </div>
             <div class="form-group">
-            <label for="semestre">SEMESTRE:</label>
-            <input class="form-control" type="text" placeholder="dijite un numero" name="semestre" id="semestre"><!--caja de texto-->
+            <label for="semestre" class="text-primary">SEMESTRE:</label>
+            <input class="form-control" type="text" placeholder="semestre en curso" name="semestre" id="semestre"><!--caja de texto-->
                   </div>
             <div class="form-group">
-            <label for="semestre">PROMEDIO:</label>
-            <input class="form-control" type="text" placeholder="ponderado academico" name="promedio" id="promedio"><!--caja de texto-->
+            <label for="semestre" class="text-primary">PROMEDIO:</label>
+            <input class="form-control" type="text" placeholder="promedio ponderado" name="promedio" id="promedio"><!--caja de texto-->
                   </div>
             <div class="form-group">
-            <label for="edad">EDAD:</label>
+            <label for="edad" class="text-primary">EDAD:</label>
             <input class="form-control" type="text" placeholder="edad" name="edad" id="edad"><!--caja de texto-->
             </div>
 
             <div class="form-group">
-              <label for="categoria">ENTRENADOR</label>
+              <label for="categoria" class="text-primary">ENTRENADOR:</label>
               <select class="form-control" name="entrenador">
                 <option value=""></option>
                 @foreach($consulta as $con)

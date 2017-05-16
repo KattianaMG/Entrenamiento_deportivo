@@ -33,12 +33,14 @@
           <label for="apellido" class="text-primary">RESULTADO TEST DE PERIMETRO ABDOMINAL:</label>
           <input class="form-control" type="int" name="p_abdominal" id="p_abdominal"><!--caja de texto-->
         </div>
-        
+
         <div class="col-md-6 ">
           <button type="submit" class="btn btn-success">Guardar</button>
         </div>
   </div>
-
+  <aside class="col-md-6">
+    <img src="{{ asset('imagenes/t_corporal.jpg')}}" >
+  </aside>
 
 
   </form>
