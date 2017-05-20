@@ -20,7 +20,7 @@ class EntrenadorController extends Controller
     {
         $entrenadores = User::all();
 
-        return view('/listar_entrenadores', compact('entrenadores'));
+        return view('listar_entrenadores', compact('entrenadores'));
     }
 
     public function mostrarformulario(){
@@ -127,6 +127,6 @@ class EntrenadorController extends Controller
     public function editarentrenador($id)
     {
       $entrenador = User::where('dni', '=', $id)->get();
-      return view('editar_entrenador', compact('entrenador'));
+      return view('/editar_entrenador', compact('entrenador'));
     }
 }
