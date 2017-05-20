@@ -43,7 +43,7 @@
         </div>
   </div>
   <aside class="col-md-6">
-    <img src="{{ asset('imagenes/t_fuerza.jpg')}}" class="img-responsive"/>
+    <img src="{{ asset('imagenes/t_fuerza.jpg')}}" >
 </aside>
 
 

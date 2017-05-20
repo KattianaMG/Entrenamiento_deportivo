@@ -39,10 +39,21 @@ Route::get('/test_flexibilidad',function ()
   return view('test_flexibilidad');
 });
 
+Route::get('/editar_entrenador',function ()
+{
+  return view('editar_entrenador');
+});
+
+Route::get('/editar_deportista',function ()
+{
+  return view('editar_deportista');
+});
+
 Route::get('/test_corporal',function ()
 {
   return view('test_corporal');
 });
+
 //**************************************
 Route::get('eliminardeportista/{id}', ['as'=>'eliminar.deportista', 'uses'=>'DeportistaController@destroy']);
 
