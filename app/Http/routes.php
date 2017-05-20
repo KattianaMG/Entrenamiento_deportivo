@@ -34,26 +34,23 @@ Route::get('/test_fuerza',function ()
 {
   return view('test_fuerza');
 });
+
+
+Route::get('/editar_entrenador/{id}',['as'=>'editar.entrenador', 'uses' => 'EntrenadorController@editarentrenador']);
+Route::post('/edit_entrenador/{id}',['as'=>'edit.entrenador', 'uses' => 'EntrenadorController@update']);
+
+Route::get('/editar_deportista/{id}', ['as' => 'editar.deportista', 'uses' => 'DeportistaController@editardeportista']);
+Route::post('/edit_deportista/{id}', ['as' => 'edit.deportista', 'uses' => 'DeportistaController@update']);
+
 Route::get('/test_flexibilidad',function ()
 {
   return view('test_flexibilidad');
-});
-
-Route::get('/editar_entrenador',function ()
-{
-  return view('editar_entrenador');
-});
-
-Route::get('/editar_deportista',function ()
-{
-  return view('editar_deportista');
 });
 
 Route::get('/test_corporal',function ()
 {
   return view('test_corporal');
 });
-
 //**************************************
 Route::get('eliminardeportista/{id}', ['as'=>'eliminar.deportista', 'uses'=>'DeportistaController@destroy']);
 

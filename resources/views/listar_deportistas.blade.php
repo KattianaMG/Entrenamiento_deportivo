@@ -53,9 +53,9 @@
         <td>{{$dep->promedio}}</td>
         <td>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
-            <a type="button" href="#" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i></a>
+            <a type="button" href="{{route('editar.deportista', $dep->dni_j)}}" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i></a>
           </div>
-          <div>
+          <div class="btn-group btn-group-xs" role="group" aria-label="...">
              <a type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#eliminar" onclick="return confirmar('{{route('eliminar.deportista', $dep->dni_j)}}')"><i class="fa fa-trash-o" aria-hidden="true"> Eliminar</i></a>
           </div>
         </td>

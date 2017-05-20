@@ -57,11 +57,8 @@ class EntrenadorController extends Controller
       );
       $entrenador = new User($datos);
       $entrenador->save();
-
+      return redirect()->route('listar.entrenador');
     }
-
-
-
 
     /**
      * Display the specified resource.
@@ -94,7 +91,23 @@ class EntrenadorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $entrenador = User::FindOrFail($id);
+
+        $request = array (
+          'name' => $request->name,
+          'apellido' => $request->apellido,
+          'email' => $request->email,
+          'sexo' => $request->sexo,
+          'profesion' => $request->profesion,
+          'direccion' => $request->direccion,
+          'deporte' => $request->deporte
+        );
+
+        $id_entrenador = $entrenador->dni;
+        $entrenador->fill($request);
+        $entrenador->save();
+        return redirect()->route('listar.entrenador');
+
     }
 
     /**
@@ -109,5 +122,11 @@ class EntrenadorController extends Controller
         $eliminar = $entrenador->delete();
 
         return back()->withInput();
+    }
+
+    public function editarentrenador($id)
+    {
+      $entrenador = User::where('dni', '=', $id)->get();
+      return view('editar_entrenador', compact('entrenador'));
     }
 }

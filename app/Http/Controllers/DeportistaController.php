@@ -54,7 +54,7 @@ class DeportistaController extends Controller
         );
         $deportista = new Deportista($datos);
         $deportista->save();
-        return redirect()->route('listar.deportistas');
+        return redirect()->route('listar.deportista');
     }
 
     public function consultarentrenador()
@@ -94,7 +94,22 @@ class DeportistaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $deportista = Deportista::FindOrFail($id);
+
+        $request = array (
+          'nombre_j' => $request->nombre,
+          'apellido_j' => $request->apellido,
+          'sexo_j' => $request->sexo,
+          'deporte_j' => $request->deporte,
+          'semestre' => $request->semestre,
+          'promedio' => $request->promedio,
+          'edad_j' => $request->edad
+        );
+
+        $id_deportista = $deportista->dni_j;
+        $deportista->fill($request);
+        $deportista->save();
+        return redirect()->route('listar.deportista');
     }
 
     /**
@@ -109,5 +124,11 @@ class DeportistaController extends Controller
         $eliminar = $deportista->delete();
 
         return back()->withInput();
+    }
+
+    public function editardeportista($id)
+    {
+      $deportista = Deportista::where('dni_j', '=', $id)->get();
+      return view('editar_deportista', compact('deportista'));
     }
 }
