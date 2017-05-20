@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\User; 
+use App\User;
 use App\Deportista;
 use DB;
 
@@ -54,7 +54,7 @@ class DeportistaController extends Controller
         );
         $deportista = new Deportista($datos);
         $deportista->save();
-        return redirect()->route('listar.deportista');
+        return redirect()->route('listar.deportistas');
     }
 
     public function consultarentrenador()

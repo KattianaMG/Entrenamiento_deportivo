@@ -57,7 +57,11 @@ class EntrenadorController extends Controller
       );
       $entrenador = new User($datos);
       $entrenador->save();
+
     }
+
+
+
 
     /**
      * Display the specified resource.
