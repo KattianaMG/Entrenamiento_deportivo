@@ -10,6 +10,12 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
   <h2>REALIZAR TEST DE FLEXIBILIDAD</h2>
   <br>
+  <div class="form-group">
+  <div class="input-group">
+    <div class="input-group-addon">00</div>
+  </div>
+</div>
+
   <form class="" action="{{route('guardar.entrenador')}}" method="POST" enctype="multipart/form-data">
     {!! csrf_field() !!}
     <div class="col-md-6">
