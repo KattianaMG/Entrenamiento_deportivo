@@ -35,6 +35,10 @@ Route::get('/test_fuerza',function ()
   return view('test_fuerza');
 });
 
+Route::get('/listar_test_fuerza',function ()
+{
+  return view('listar_test_fuerza');
+});
 
 Route::get('/editar_entrenador/{id}',['as'=>'editarentrenador', 'uses' => 'EntrenadorController@editarentrenador']);
 Route::post('/edit_entrenador/{id}',['as'=>'edit.entrenador', 'uses' => 'EntrenadorController@update']);
