@@ -56,7 +56,7 @@
         <td>{{$dep->promedio}}</td>
         <td>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
-            <a type="button" class="btn btn-primary">FUERZA</a>
+            <a type="button" class="btn btn-primary" href="{{route('listtestfuerza', $dep->dni_j)}}">FUERZA</a>
             <a type="button" class="btn btn-success">RESISTENCIA</a>
           </div>
           <br>
