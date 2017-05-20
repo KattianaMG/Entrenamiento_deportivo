@@ -40,6 +40,21 @@ Route::get('/listar_test_fuerza',function ()
   return view('listar_test_fuerza');
 });
 
+Route::get('/listar_test_flexibilidad',function ()
+{
+  return view('listar_test_flexibilidad');
+});
+
+Route::get('/listar_test_corporal',function ()
+{
+  return view('listar_test_corporal');
+});
+
+Route::get('/listar_test_resistencia',function ()
+{
+  return view('listar_test_resistencia');
+});
+
 Route::get('/editar_entrenador/{id}',['as'=>'editarentrenador', 'uses' => 'EntrenadorController@editarentrenador']);
 Route::post('/edit_entrenador/{id}',['as'=>'edit.entrenador', 'uses' => 'EntrenadorController@update']);
 

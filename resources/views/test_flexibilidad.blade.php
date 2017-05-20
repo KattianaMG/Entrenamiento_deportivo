@@ -39,10 +39,6 @@
           <label for="apellido" class="text-primary">RESULTADO TEST DE ELEVACION DE HOMBROS:</label>
           <input class="form-control" type="int" name="elevacion_hombros" id="elevacion_hombros"><!--caja de texto-->
         </div>
-        <div class="form-group">
-          <label for="apellido" class="text-primary">RESULTADO TEST DE HOMBROS:</label>
-          <input class="form-control" type="int" name="hombro" id="hombro"><!--caja de texto-->
-        </div>
 
         <div class="col-md-6 ">
           <button type="submit" class="btn btn-success">Guardar</button>
