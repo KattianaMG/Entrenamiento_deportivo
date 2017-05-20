@@ -30,21 +30,20 @@ Route::get('/test_resistencia',function ()
   return view('test_resistencia');
 });
 
-Route::get('/test_fuerza',function ()
-{
-  return view('test_fuerza');
-});
+//**************************************************************
+Route::get('/listar_test_fuerza/{id}', ['as' => 'listtestfuerza', 'uses' => 'TestController@listartestfuerza']);
 
-Route::get('/listar_test_fuerza',function ()
-{
-  return view('listar_test_fuerza');
-});
+Route::get('/test_fuerza/{id}', ['as' => 'testfuerza', 'uses' => 'TestController@index']);
+
+Route::post('/guardar_fuerza/{id}', ['as' => 'guardarfuerza', 'uses' => 'TestController@guardarfuerza']);
+
 
 Route::get('/editar_entrenador/{id}',['as'=>'editarentrenador', 'uses' => 'EntrenadorController@editarentrenador']);
 Route::post('/edit_entrenador/{id}',['as'=>'edit.entrenador', 'uses' => 'EntrenadorController@update']);
 
 Route::get('/editar_deportista/{id}', ['as' => 'editardeportista', 'uses' => 'DeportistaController@editardeportista']);
 Route::post('/edit_deportista/{id}', ['as' => 'edit.deportista', 'uses' => 'DeportistaController@update']);
+//****************************************************+
 
 Route::get('/test_flexibilidad',function ()
 {
