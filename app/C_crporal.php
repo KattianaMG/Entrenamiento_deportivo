@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class C_corporal extends Model
+class C_crporal extends Model
 {
-    protected $table = 'c_corporal';
+    protected $table = 'c_crporal';
 
 
     protected $primaryKey = 'codigo_cc';
@@ -14,7 +14,7 @@ class C_corporal extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['fecha_cc', 'talla', 'peso', 'imc', '	p_abdominal', 'dni_cj'];
+    protected $fillable = ['fecha_cc', 'talla', 'peso', 'imc', 'p_abdominal', 'dni_cj'];
     //protected $hidden = ['clave'];
 
   /*  public function compraitem(){

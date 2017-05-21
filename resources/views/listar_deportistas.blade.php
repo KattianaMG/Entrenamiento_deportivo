@@ -57,12 +57,12 @@
         <td>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
             <a type="button" class="btn btn-primary" href="{{route('listtestfuerza', $dep->dni_j)}}">FUERZA</a>
-            <a type="button" class="btn btn-success">RESISTENCIA</a>
+            <a type="button" class="btn btn-success" href="{{route('listarresistencia', $dep->dni_j)}}">RESISTENCIA</a>
           </div>
           <br>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
-            <a type="button" class="btn btn-info">FLEXIBILIDAD</a>
-            <a type="button" class="btn btn-warning">C. CORPORAL</a>
+            <a type="button" class="btn btn-info" href="{{route('listarflexibilidad', $dep->dni_j)}}">FLEXIBILIDAD</a>
+            <a type="button" class="btn btn-warning" href="{{route('listarcorporal', $dep->dni_j)}}">C. CORPORAL</a>
           </div>
          </div>
         </td>

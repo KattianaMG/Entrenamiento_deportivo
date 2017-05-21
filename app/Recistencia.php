@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Resistencia extends Model
+class Recistencia extends Model
 {
     protected $table = 'resistencia';
 
@@ -14,6 +14,6 @@ class Resistencia extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['fecha_res', 'cooper', '	leger', 'burpee', 'dni_jres'];
+    protected $fillable = ['fecha_res', 'cooper', 'leger', 'burpee', 'dni_jres'];
     //protected $hidden = ['clave'];
 }
