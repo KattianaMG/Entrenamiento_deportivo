@@ -7,7 +7,8 @@
   @section ('content')
 
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <h1>REISTRAR ENTRENADOR</h1>
+      <h1>REGISTRAR ENTRENADOR</h1>
+      @include('errors.errors')
       <form class="" action="{{route('guardar.entrenador')}}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <div class="col-md-6">

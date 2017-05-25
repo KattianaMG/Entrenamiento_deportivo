@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Deportista;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 class DeportistaController extends Controller
 {
@@ -19,7 +20,8 @@ class DeportistaController extends Controller
      */
     public function index()
     {
-        $deportistas = Deportista::all();
+        $deportistas = Deportista::where('fk_entrenador', Auth::user()->dni)->get();//consulta
+        //liste deportistas siempre que fk_entrenador sea igual a dni del entrenador logueado
         return view('/listar_deportistas', compact('deportistas'));
     }
 
@@ -39,8 +41,10 @@ class DeportistaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request)//registrar deportista
     {
+        $entrenador =  Auth::user()->dni;//capturar entrenador
+
         $datos = array (
           'dni_j' => $request->dni,
           'nombre_j' => $request->nombre,
@@ -50,7 +54,7 @@ class DeportistaController extends Controller
           'semestre' => $request->semestre,
           'promedio' => $request->promedio,
           'edad_j' => $request->edad,
-          'fk_entrenador' => $request->entrenador
+          'fk_entrenador' => $entrenador
         );
         $deportista = new Deportista($datos);
         $deportista->save();
@@ -59,7 +63,7 @@ class DeportistaController extends Controller
 
     public function consultarentrenador()
     {
-      $consulta = User::all();
+      $consulta = User::all();//consultar entrenador y mandarlo a la vista
       return view('deportista', compact('consulta'));
     }
 
@@ -92,7 +96,7 @@ class DeportistaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id)//metodo editar Deportistas
     {
         $deportista = Deportista::FindOrFail($id);
 
@@ -118,7 +122,7 @@ class DeportistaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id)//eliminar deportistas
     {
         $deportista = Deportista::FindOrFail($id);
         $eliminar = $deportista->delete();

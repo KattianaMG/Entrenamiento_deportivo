@@ -44,6 +44,8 @@ class EntrenadorController extends Controller
      */
     public function store(Request $request)
     {
+
+
           $datos = array (
           'dni' => $request->dni,
           'name' => $request->name,
@@ -128,5 +130,10 @@ class EntrenadorController extends Controller
     {
       $entrenador = User::where('dni', '=', $id)->get();
       return view('/editar_entrenador', compact('entrenador'));
+    }
+
+    public function inicioplataforma()
+    {
+      return view('inicio_plataforma');
     }
 }

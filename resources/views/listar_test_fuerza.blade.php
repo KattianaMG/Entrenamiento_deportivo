@@ -51,12 +51,12 @@
   @foreach($fuerza as $force)
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>{{$force->fecha_fz}}</td>
+      <td>{{$force->sit_up}}</td>
+      <td>{{$force->press_banca}}</td>
+      <td>{{$force->curl_biceps}}</td>
+      <td>{{$force->sentadilla}}</td>
+      <td>{{$force->f_hombro}}</td>
       <td>
         <div class="btn-group btn-group-xs" role="group" aria-label="...">
            <a type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#eliminar" onclick="return confirmar('{{route('eliminarfuerza', $force->codigo_fz)}}')"><i class="fa fa-trash-o" aria-hidden="true"> Eliminar</i></a>
