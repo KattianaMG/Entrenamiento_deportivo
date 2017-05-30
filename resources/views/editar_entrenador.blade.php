@@ -10,20 +10,20 @@
       <h1>EDITAR ENTRENADOR</h1>
       <br>
       @foreach ($entrenador as $ent)
-      <form class="" action="{{route('edit.entrenador', $ent->dni)}}" method="POST" enctype="multipart/form-data">
+      <form class="" action="{{route('edit.entrenador', $ent->dni)}}" method="POST" enctype="multipart/form-data" >
         {!! csrf_field() !!}
         <div class="col-md-6">
             <div class="form-group">
               <label for="nombre" class="text-primary">NOMBRE:</label>
-              <input class="form-control" type="text" name="name" value="{{$ent->name}}" value="{{ old('name') }}"><!--caja de texto-->
+              <input class="form-control" type="text" name="name" value="{{$ent->name}}" value="{{ old('name') }}"  required pattern="[A-Z,a-z]{2,}" title="SOLO TEXTO" /><!--caja de texto-->
             </div>
             <div class="form-group">
               <label for="apellido" class="text-primary">APELLIDOS:</label>
-              <input class="form-control" type="text" value="{{$ent->apellido}}" name="apellido" id="apellido"><!--caja de texto-->
+              <input class="form-control" type="text" value="{{$ent->apellido}}" name="apellido" id="apellido"  required pattern="[A-Z,a-z]{2,}" title="SOLO TEXTO" /><!--caja de texto-->
             </div>
             <div class="form-group">
               <label for="email" class="text-primary">EMAIL:</label>
-              <input class="form-control" type="email" value="{{$ent->email}}" name="email" value="{{ old('email') }}">
+              <input class="form-control" type="email" value="{{$ent->email}}" name="email" value="{{ old('email') }}"  required />
             </div>
 
           <div class="form-group">
@@ -44,15 +44,15 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="nombre" class="text-primary">DEPORTE:</label>
-              <input class="form-control" type="text" value="{{$ent->deporte}}" name="deporte" id="deporte"><!--caja de texto-->
+              <input class="form-control" type="text" value="{{$ent->deporte}}" name="deporte" id="deporte" required pattern="[A-Z,a-z]{2,}" title="SOLO TEXTO" /><!--caja de texto-->
             </div>
             <div class="form-group">
               <label for="profecion" class="text-primary">PROFESION:</label>
-              <input class="form-control" type="text" value="{{$ent->profesion}}" name="profesion" id="profesion"><!--caja de texto-->
+              <input class="form-control" type="text" value="{{$ent->profesion}}" name="profesion" id="profesion" required pattern="[A-Z,a-z]{2,}" title="SOLO TEXTO" /><!--caja de texto-->
             </div>
              <div class="form-group">
                <label for="profecion" class="text-primary">DIRECCION:</label>
-               <input class="form-control" type="text" value="{{$ent->direccion}}" name="direccion" id="direccion"><!--caja de texto-->
+               <input class="form-control" type="text" value="{{$ent->direccion}}" name="direccion" id="direccion" required=""><!--caja de texto-->
              </div>
         </div>
       </form>

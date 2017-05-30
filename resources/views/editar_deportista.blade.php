@@ -15,11 +15,11 @@
           <br>
             <div class="form-group">
             <label for="nombre" class="text-primary">NOMBRE:</label>
-            <input class="form-control" type="text" value="{{$dep->nombre_j}}" name="nombre" id="nombre"><!--caja de texto-->
+            <input class="form-control" type="text" value="{{$dep->nombre_j}}" name="nombre" id="nombre" required pattern="[A-Z,a-z]{2,}" title="SOLO TEXTO" /><!--caja de texto-->
               </div>
             <div class="form-group">
             <label for="apellido" class="text-primary">APELLIDOS:</label>
-            <input class="form-control" type="text" value="{{$dep->apellido_j}}" name="apellido" id="apellido"><!--caja de texto-->
+            <input class="form-control" type="text" value="{{$dep->apellido_j}}" name="apellido" id="apellido" required pattern="[A-Z,a-z]{2,}" title="SOLO TEXTO" /><!--caja de texto-->
               </div>
             <div class="form-group">
               <label for="categoria" class="text-primary">SEXO:</label>
@@ -32,19 +32,19 @@
            </div>
             <div class="form-group">
             <label for="nombre" class="text-primary">DEPORTE:</label>
-            <input class="form-control" type="text" value="{{$dep->deporte_j}}" name="deporte" id="deporte"><!--caja de texto-->
+            <input class="form-control" type="text" value="{{$dep->deporte_j}}" name="deporte" id="deporte" required pattern="[A-Z,a-z]{2,}" title="SOLO TEXTO" /><!--caja de texto-->
                 </div>
             <div class="form-group">
             <label for="semestre" class="text-primary">SEMESTRE:</label>
-            <input class="form-control" type="text" value="{{$dep->semestre}}" name="semestre" id="semestre"><!--caja de texto-->
+            <input class="form-control" type="text" value="{{$dep->semestre}}" name="semestre" id="semestre" required pattern="[0-9]{1,2}" title=" SOLO DATO NUMERICO"/><!--caja de texto-->
                   </div>
             <div class="form-group">
             <label for="semestre" class="text-primary">PROMEDIO:</label>
-            <input class="form-control" type="text" value="{{$dep->promedio}}" name="promedio" id="promedio"><!--caja de texto-->
+            <input class="form-control" type="text" value="{{$dep->promedio}}" name="promedio" id="promedio" required pattern="[0-5]{1}[.]{1}[0-9]{1}" title="ej. 3.0" /><!--caja de texto-->
                   </div>
             <div class="form-group">
             <label for="edad" class="text-primary">EDAD:</label>
-            <input class="form-control" type="text" value="{{$dep->edad_j}}" name="edad" id="edad"><!--caja de texto-->
+            <input class="form-control" type="text" value="{{$dep->edad_j}}" name="edad" id="edad" pattern="[0-9]{1,2}" title=" SOLO DATO NUMERICO"/><!--caja de texto-->
             </div>
 
             <div class="form-group">
